@@ -1,0 +1,38 @@
+//Calculator using switch statement 
+#include <stdio.h>
+#include <stdlib.h>
+int main () 
+          {
+              char choices;
+              int  a,b;
+              while(1){
+                  printf("Enter the operator(+,-,*,/)\nEnter x to exit\n");
+                  scanf(" %c",&choices);
+              
+              if (choices=='x'){
+                  exit(0);
+              }
+              printf("Enter the First number = ",a);
+              scanf("%d",&a);
+              printf("Enter the second number = ",b);
+              scanf("%d",&b);
+                                                switch (choices) {
+                                                 case '+':
+                                     printf("%d+%d=%d\n",a,b,a+b);
+                                                break;
+                                                 case '-':
+                                     printf("%d-%d=%d\n",a,b,a-b);
+                                                break;
+                                                 case '*':
+                                                 if(b!=0){
+                                     printf("%d*%d=%d\n",a,b,a*b);}
+                                                break;
+                                                 case '/': 
+                                     printf("%d/%d=%d\n",a,b,a/b);
+                                                break;
+                                                default:
+                                                printf("Error occured \n");
+          }
+          }
+          return 0;
+        }
